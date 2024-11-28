@@ -1,0 +1,131 @@
+.container-resume {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    min-width: 25vw;
+    height: 100vh;
+}
+
+.resume {
+    position: absolute;
+    z-index: 0;
+    top: 10%;
+    width: 100vw;
+    min-height: calc(100vh - 10%);
+    overflow-y: auto;
+    background: linear-gradient(to right,
+        var(--primary-color) max(calc(25 * var(--original-vw) / 100), 35%), 
+        var(--tertiary-color) max(calc(25 * var(--original-vw) / 100), 35%),
+        var(--tertiary-color) calc(100 * var(--original-vw) / 100));
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    left: 5%;
+    width: 25%; 
+    height: 40%;
+    padding-top: 3%;
+    align-items: center;
+}
+
+.sidebar-links {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    position: relative;
+    border: 2px solid var(--tertiary-color);
+    margin: 10px 0;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--tertiary-color);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sidebar-links:hover {
+    background: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+.sidebar-links:active{
+    background: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+
+.content {
+    position: absolute;
+    top: 0%;
+    left: 35%; /* Space for sidebar */
+    width: 65%;
+    padding: 20px;
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+.tab-content{
+	display: none;
+    width: 80%;
+    height: calc(100vh - 10%);
+}
+
+/* only active tab will display the block. helps in scripting later.*/
+.tab-content.active-tab{
+	display: block;
+    
+}
+
+.tab-header{
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    background: none;
+    border-radius: 5px;
+    border: 1px dotted var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.tab-content .field-value::before{
+    content: " : ";
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.tab-content .info-block {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    word-wrap: normal;
+}
+.tab-content .main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-content .sub-title {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-content .subb-title {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-content .info-text {
+    font-size: 15px;
+    justify-content: space-evenly;
+}
+
+.tab-content .info-text::before {
+    content: "> ";
+    margin-left: 10px;
+}
+

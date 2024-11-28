@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!-- Character encoding for proper text display -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Responsive design -->
+        <title>Nileshwar-Resume</title> <!-- Descriptive title for SEO -->
+        <!-- Link to your CSS file -->
+        <link rel="stylesheet" href="../css/fonts.css"> 
+        <link rel="stylesheet" href="../css/styles-resume.css"> 
+        <link rel="stylesheet" href="../css/styles-index.css"> 
+        <meta name="description" content="A brief description of your webpage for SEO purposes."> <!-- SEO description -->
+        <meta name="keywords" content="HTML, CSS, JavaScript, your keywords here"> <!-- Keywords for SEO -->
+        <meta name="author" content="Ganesh K Nileshwar"> <!-- Author of the document -->
+        <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon"> <!-- Favicon for the browser tab -->
+    </head>
+<body>
+    <div class="container-resume">
+        <header>
+            <!-- Favicon and Navigation Links go here -->
+            <div class="left-header">
+                <div class="logo-icon"><img src="../images/favicon/favicon.ico" alt="A logo artistically displaying the letter N"></div>
+                <div class="logo-text">ileshwar</div>
+            </div>
+            <div class="right-header">
+                <ul>
+                    <li><a class="nav-links" href="../index.html">About Me</a></li>
+                    <li><a class="nav-links" href="./resume.html">Resume</a></li>
+                    <li><a class="nav-links" href="./coming-soon.html">Blog/Projects</a></li>
+                    <li><a class="nav-links" href="./coming-soon.html">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="resume">
+            <div class="sidebar">
+                <div class="sidebar-links" onclick="opentab('tab-skills')"><h5>SKILLS</h5></div>
+                <div class="sidebar-links" onclick="opentab('tab-experience')"><h5>EXPERIENCE</h5></div>
+                <div class="sidebar-links" onclick="opentab('tab-education')"><h5>EDUCATION</h5></div>
+                <div class="sidebar-links" onclick="opentab('tab-hobbys')"><h5>HOBBYS</h5></div>
+            </div>
+            <div class="content">
+                <div class="tab-content active-tab" id="tab-skills">
+                    <h1 class="tab-header">Skills</h1>
+                    <table>
+                        <tr>
+                            <td class="field-name">Scripting</td>
+                            <td class="field-value">Bash, Python</td>
+                        </tr>
+                        <tr>
+                            <td class="field-name">Container Management</td>
+                            <td class="field-value">Docker, Kubernetes</td>
+                        </tr>
+                        <tr>
+                            <td class="field-name">Version Control</td>
+                            <td class="field-value">Git, Github</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Platforms</td>
+                            <td class="field-value">AWS Basics</td>
+                        </tr>
+                        <tr>
+                            <td>Operating Systems</td>
+                            <td class="field-value">Linux, Windows</td>
+                        </tr>
+                        <tr>
+                            <td>Programming Languages</td>
+                            <td class="field-value">MATLAB, CPLEX, Java</td>
+                        </tr>
+                        <tr>
+                            <td>Online Courses</td>
+                            <td class="field-value">LFCS, CKA, CKAD (Kodekloud)</td>
+                        </tr>
+                        <tr>
+                            <td> Spoken Languages</td>
+                            <td class="field-value">English, German, Konkani, Hindi, Malayalam</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-content" id="tab-experience">
+                    <h1 class="tab-header">Experience</h1>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>Homelab</span>
+                            <span>05.2023 - Present</span>
+                        </div>
+                        <div class="info-text">Setting up basic home server with Ubuntu and configuring firewall ufw, securing ssh remote access                        </div>
+                        <div class="info-text">Using Docker to deploy the media server - user facing service</div>
+                        <div class="info-text">Setting up Tailscale private VPN network, to ensure remote access to the server</div>
+                        <div class="info-text">Understanding of provisioning using bash scripting</div>
+                        <div class="info-text">Introductory experience with AWS - setting up multiple VMs and establishing communication between servers</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>Researcher in Information Technology</span>
+                            <span>05.2017 - 04.2023</span>
+                        </div>
+                        <div class="sub-title">
+                            Technische Universität, Dortmund
+                        </div>
+                        <div class="subb-title">
+                            Research Area: Performance Evaluation of Resource Management with Commitment
+                        </div>
+                        <div class="info-text">Setting up the simulation framework including implementation of different scheduling algorithms in Python</div>
+                        <div class="info-text">Deploying jobs on remote SLURM servers using bash scripting</div>
+                        <div class="info-text">Conducted tutorials and labs for ”Scheduling Theory”: implemented classical scheduling algorithms in CPLEX and MATLAB</div>
+                        <div class="info-text">Projectgroup - Transit Planning: guided the group into implementing two different methods of setting up a bus route, after collecting real world data</div>
+                        <div class="info-text">Projectgroup - Online Load Maximization with Commitment: an approach to resource allocation process with the help of machine learning</div>
+                    </div>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>Senior Engineer, Planning and Material Movement</span>
+                            <span>09.2010 - 08.2012</span>
+                        </div>
+                        <div class="sub-title">
+                            Bosch Ltd., Bangalore, India (Demand Planning & Logistics, Aftermarket Division)
+                        </div>
+                        <div class="info-text">Demand planning and order fulfillment of fuel injection pumps and spares</div>
+                        <div class="info-text">Report and monitor monthly GEZ, CSL and Sales for the AA division</div>
+                        <div class="info-text">Interact with suppliers for planned order fulfillment</div>
+                        <div class="info-text">Developed automated tool in Excel using VBA for order-wise allocation and planning of imported goods, leading to reduction of man-hours involved by approximately 40%</div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-education">
+                    <h1 class="tab-header">Education</h1>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>German Telc B2 BSK</span>
+                            <span>08.2023 - 01.2024</span>
+                        </div>
+                        <div class="sub-title">
+                            <span>Bildungskreis Handwerk e.V., Dortmund</span>
+                            <span>92.91%</span>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>MSc. in Robotics (Automation and Robotics)</span>
+                            <span>10.2012 - 03.2017</span>
+                        </div>
+                        <div class="sub-title">
+                            <span>Technische Universität, Dortmund</span>
+                            <span>Final Grade: 2.0</span>
+                        </div>
+                        <div class="subb-title">
+                            <span><u>Master's Thesis</u> : Design, Implementation and Evaluation for a Scheduling Problem with Deadlines and Consumable Resources at IRF, TU Dortmund (Grade: 1.1)</span>
+                        </div>
+                        <div class="subb-title">
+                            <span><u>Master's Project</u> : Construction of topographic maps based on UAV acquired images using MATLAB. Designed and implemented a framework for the construction of topographic maps from raw images, using the principles of camera calibration, feature detection, feature tracking and stereo vision</span>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>B.Tech Mechanical Engineering</span>
+                            <span>08.2005 - 05.2009</span>
+                        </div>
+                        <div class="sub-title">
+                            <span>Mahatma Gandhi University, Kottayam, India</span>
+                            <span>GPA: 81.17%</span>
+                        </div>
+                        <div class="subb-title">
+                            <span><u>Bachelor's Project</u> : Multiphase analysis of conventional fluidized bed using CFD. Poly-phase flow analysis of fluid, flowing through an inclined vane distributor equipped on a plenum chamber with a tangential inlet, using the software - Gambit and Fluent.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-hobbys">
+                    <h1 class="tab-header">Hobbys</h1>
+                    <div class="info-block">
+                        <div class="main-title">
+                            <span>Boules/Pétanque</span>
+                        </div>
+                        <div class="subb-title">
+                            <span>Boules is a game that involves throwing or rolling heavy balls as close as possible to a small target ball, known as the "jack" or "cochonnet." The game originates from France and is typically played outdoors in open spaces like parks or town squares. Players aim to score points by having their balls closer to the target than their opponents. Boules has a rich history, with its roots tracing back to ancient games, and remains a beloved pastime in French culture today.</span>        
+                        </div>
+                        <center><iframe width="480" height="auto" style="aspect-ratio: 1.5" src="https://www.youtube.com/embed/bU813SvTi_4?si=u9o2mOga8VRGkk-F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></center>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+	var tablinks = document.getElementsByClassName("sidebar-links");
+	var tabcontents = document.getElementsByClassName("tab-content");
+
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+</script>
+</html>
+

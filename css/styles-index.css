@@ -1,0 +1,312 @@
+:root {
+    --font-main: 'Fira Code', Arial, sans-serif;
+    --font-logo-text: 'Arizonia', 'Arabella', sans-serif;
+
+    --pure-white: #FFFFFF;
+    --pure-black: #000000;
+    --primary-color:  #212529;
+    --secondary-color: #343A40;
+    --tertiary-color: #CED4DA;
+
+    --original-vw: 1920px;
+    --original-vh: 1080px;
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background-image: url(images/site-bg.png);
+  	background-repeat:repeat; */
+  	font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    min-width: 25vw;
+    height: 110vh;
+}
+
+/* the header section, which will cover the favicon and navigation link */
+header {
+    background-color: var(--tertiary-color);
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between; 
+    z-index: 1;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.logo-text {
+    font-family: var(--font-logo-text);
+    font-size: 45px;
+    padding-left: 5px;
+}
+
+.right-header {
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+    align-items: center;
+}
+
+.right-header ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.right-header ul li{
+    margin: 0 15px;
+}
+
+.nav-links {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* ::after inserts defined element after */
+.nav-links::after{
+	content: '';
+	width: 0;
+	height: 3px;
+	background: var(--primary-color);
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transition: 0.5s;
+}
+/* animation while hovering */
+.nav-links:hover::after{
+	width: 100%;
+}
+
+/* the main content of the index page */
+.index {
+    position: absolute;
+    z-index: 0;
+    top: 10%;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right,
+        var(--primary-color) max(calc(25 * var(--original-vw) / 100), 35%), 
+        var(--tertiary-color) max(calc(25 * var(--original-vw) / 100), 35%),
+        var(--tertiary-color) calc(100 * var(--original-vw) / 100));
+}
+
+/* the content island at the center */
+.island {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: calc(49 * var(--original-vw) / 100);
+    height: calc(45 * var(--original-vh) / 100);
+}
+
+/* the photo card */
+.photo-island {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+    var(--secondary-color) 85%, 
+    var(--pure-white) 85%,
+    var(--pure-white) 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* circular frame to hold the image */
+.photo-frame{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    background-color: var(--tertiary-color);
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+/* properties of the actual image */
+.profile-image{
+    position: absolute;
+    width: 110%;
+    height:110%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47.5%, -54%);
+}
+
+/* name tag under the profile image */
+.photo-name-tag{
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-name{
+    color: var(--pure-white);
+    margin: 0;
+    font-size: 30px;
+}
+
+/* horizontal line */
+.photo-name-ruler{
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    left: 50%;
+    top: 75%;
+    width: 40%;
+    transform: translateX(-50%);
+}
+
+.social-media-links {
+    position: absolute;
+    top: 85%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-links img{
+    object-fit: cover;
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+}
+
+/* the area of the text block next to the image island */
+.welcome-text-block{
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+/* the main greeting text */
+.greeting-text {
+    font-size: 45px;
+    width: 100%;
+    height: 15%;
+    top: 0%;
+    padding-left: 20px;
+}
+
+/* the sub-text */
+.greeting-sub-text {
+    font-size: 28px;
+    width: 100%;
+    height: 10%;
+    top: 15%;
+    padding-left: 60px;
+}
+
+/* the section with two link buttons */
+.profile-links {
+    font-size: 20px;
+    width: 100%;
+    height: 15%;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the styling of the link buttons */
+.link-button, .link-button::after{
+    margin: 0 0.5em;
+    border: 1px solid var(--primary-color);
+    padding: 2px 15px;
+    border-radius: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.link-button:hover{
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.link-button:active{
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+
+/* small test describing the profile */
+.description-text {
+    font-size: 17px;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 60%;
+    top: 40%;
+    text-align: justify;
+    align-items: center;
+    padding-top: 1em;
+}
+
+/* paragraph within the description element */
+.description-text p{
+    margin-bottom: 1em;
+}
+
+
+
+footer {
+    background-color: var(--tertiary-color);
+    position: relative;
+    top:100%;
+    z-index: 1;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-footer{
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.right-footer{
+    margin-right: 25px;
+    display: flex;
+}
+
+.temp-message{
+    width: 100vw;
+    height: 100vh;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
