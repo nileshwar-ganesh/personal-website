@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+    external-dns.alpha.kubernetes.io/hostname: web.nileshwar-de
+    external-dns.alpha.kubernetes.io/target: ${{INGRESS_TARGET}}
+  name: website-ingress
+  namespace: website
+spec:
+  rules:
+  - host: web.nileshwar.de
+    http:
+      paths:
+      - backend:
+          service:
+            name: website-svc
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
