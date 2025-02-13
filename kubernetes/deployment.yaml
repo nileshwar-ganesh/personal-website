@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: website
-        image: ${{secret.DOCKERHUB_USERNAME}}/website-v1.0:latest
+        image: nileshgk/website-v1.0:latest
         ports:
         - containerPort: 80
