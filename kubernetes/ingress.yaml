@@ -4,7 +4,7 @@ metadata:
   annotations:
     external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     external-dns.alpha.kubernetes.io/hostname: web.nileshwar-de
-    external-dns.alpha.kubernetes.io/target: ${{INGRESS_TARGET}}
+    external-dns.alpha.kubernetes.io/target: 099b0f70-6f52-4ca6-b8be-4d570872536e.cfargotunnel.com
   name: website-ingress
   namespace: website-argocd
 spec:
